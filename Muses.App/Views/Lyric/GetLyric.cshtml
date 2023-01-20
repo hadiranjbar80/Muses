@@ -1,18 +1,34 @@
-﻿@{
+﻿@model GetLyricViewModel
+@{
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <form asp-action="" asp-controller="" method="post">
-        <div class="form-group">
-            <input type="text" name="artist"/>
-            <input type="text" name="songName"/>
+
+<form asp-action="GetLyric" enctype="multipart/form-data">
+    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+    <div class="row">
+        <div class="form-group col-6">
+            <label asp-for="ArtistName" class="control-label"></label>
+            <input asp-for="ArtistName" class="form-control" />
+            <span asp-validation-for="ArtistName" class="text-danger"></span>
         </div>
-        <input type="submit" value="Get"/>
-    </form>
-</div>
+    </div>
+    <div class="row">
+        <div class="form-group col-6">
+            <label asp-for="SongName" class="control-label"></label>
+            <input asp-for="SongName" class="form-control" />
+            <span asp-validation-for="SongName" class="text-danger"></span>
+        </div>
+    </div>
+    <div class="form-group">
+        <input type="submit" value="Search" class="btn btn-primary" />
+    </div>
 
+</form>
 
-<div>
-    @ViewBag.L
-</div>
+@if (Model != null)
+{
+    <div>
+        @ViewBag.L
+    </div>
+}
