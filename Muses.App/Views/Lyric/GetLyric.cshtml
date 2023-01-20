@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <form asp-action="" asp-controller="" method="post">
+        <div class="form-group">
+            <input type="text" name="artist"/>
+            <input type="text" name="songName"/>
+        </div>
+        <input type="submit" value="Get"/>
+    </form>
+</div>
+
+
+<div>
+    @ViewBag.L
+</div>
