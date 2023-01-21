@@ -10,4 +10,8 @@
     <ProjectReference Include="..\Muses.Domain\Muses.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="wwwroot\Transcripts\" />
+  </ItemGroup>
+
 </Project>

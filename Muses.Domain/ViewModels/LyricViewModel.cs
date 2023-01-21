@@ -7,11 +7,10 @@ using System.Threading.Tasks;
 
 namespace Muses.Domain.ViewModels
 {
-    
     public class GetLyricViewModel
     {
         [Required]
-        [Display(Name ="ArtistName")]
+        [Display(Name = "ArtistName")]
         public string ArtistName { get; set; } = string.Empty;
         [Required]
         [Display(Name = "SongName")]
