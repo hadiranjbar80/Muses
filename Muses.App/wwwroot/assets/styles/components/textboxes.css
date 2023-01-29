@@ -1,0 +1,49 @@
+/*
+* Muses
+* Mohammad Javad Rakhshani
+* Jan, 2023
+*
+* Textboxes
+*/
+
+/* Textbox */
+.textbox {
+    border: none;
+    outline: var(--color-textbox-color) solid 0;
+    font-size: 1.3em;
+    background-color: var(--color-textbox-background);
+    color: var(--color-textbox-color);
+    border-radius: var(--raduis-textbox-border);
+    padding: var(--padding-textbox-top)
+             var(--padding-textbox-right)
+             var(--padding-textbox-bottom)
+             var(--padding-textbox-left);
+    margin: .7em;
+    transition-property: outline, color;
+    transition-duration: 80ms;
+    transition-timing-function: var(--transition-timing-function);
+}
+
+/* Textbox Properties */
+.textbox:focus {
+    outline: var(--color-textbox-color) solid 1px;
+}
+.textbox::placeholder {
+    color: var(--color-textbox-placeholder-color);
+}
+.textbox:disabled {
+    background-color: var(--color-textbox-disable-background);
+    color: var(--color-textbox-disabled-color);
+}
+.textbox.error::placeholder {
+    color: var(--color-textbox-error-color);
+}
+.textbox.error {
+    background-color: var(--color-textbox-error-background);
+    color: var(--color-textbox-error-color);
+    outline: var(--color-textbox-error-color) solid 1px;
+}
+.textbox-error-message {
+    width: var(--size-width-error-text);
+    margin: 0 calc(var(--padding-textbox-right) * 1.4) 0 calc(var(--padding-textbox-left) * 1.4);
+}

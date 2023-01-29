@@ -1,0 +1,132 @@
+/*
+* Muses
+* Mohammad Javad Rakhshani
+* Jan, 2023
+*
+* Buttons
+*/
+
+/* Normal Button */
+.btn {
+    cursor: pointer;
+    border: none;
+    outline: var(--color-btn-outline) solid 0;
+    background-color: var(--color-btn-background);
+    color: var(--color-btn-color);
+    font-size: 1.3em;
+    padding: .75em 1.75em;
+    border-radius: var(--raduis-btn-border);
+    transition-property: outline, color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--transition--timing-function);
+    margin: .7em;
+}
+.btn:focus {
+    outline: var(--color-btn-color) solid 2px;
+}
+.btn:hover {
+    outline: var(--color-btn-outline) solid 0px;
+    background-color: var(--color-btn-outline);
+}
+.btn:active {
+    outline: var(--color-btn-color) solid 0px;
+    background-color: var(--color-btn-color);
+    color: var(--color-btn-background);
+}
+.btn:disabled {
+    background-color: var(--color-textbox-disable-background);
+    color: var(--color-textbox-disabled-color);
+}
+.btn:disabled:focus {
+    outline: var(--color-btn-color) solid 0px;
+    background-color: var(--color-textbox-disable-background);
+    color: var(--color-textbox-disabled-color);
+}
+.btn:disabled:hover {
+    outline: var(--color-btn-color) solid 0px;
+    background-color: var(--color-textbox-disable-background);
+    color: var(--color-textbox-disabled-color);
+}
+.btn:disabled:active {
+    outline: var(--color-btn-color) solid 0px;
+    background-color: var(--color-textbox-disable-background);
+    color: var(--color-textbox-disabled-color);
+}
+
+/* Primary Button */
+.btn-primary {
+    outline: var(--color-btn-primary-outline) solid 0px;
+    background-color: var(--color-btn-primary-background);
+    color: var(--color-btn-primary-color);
+}
+.btn-primary:focus {
+    outline: var(--color-btn-primary-outline) solid 2px;
+}
+.btn-primary:hover {
+    outline: var(--color-btn-primary-outline) solid 0px;
+    background-color: var(--color-btn-primary-outline);
+    color: var(--color-btn-primary-color);
+}
+.btn-primary:active {
+    outline: var(--color-btn-primary-outline) solid 0px;
+    background-color: var(--color-btn-primary-background-dark);
+    color: var(--color-btn-primary-color);
+}
+
+/* Link Button */
+.btn-link {
+    outline: var(--color-btn-color) solid 0px;
+    background-color: transparent;
+    color: var(--color-btn-color);
+}
+.btn-link:focus {
+    outline: var(--color-btn-color) solid 2px;
+    background-color: transparent;
+    color: var(--color-btn-color);
+}
+.btn-link:hover {
+    outline: var(--color-btn-color) solid 0px;
+    background-color: var(--color-btn-background);
+    color: var(--color-btn-color);
+}
+.btn-link:active {
+    outline: var(--color-btn-color) solid 0px;
+    background-color: var(--color-btn-color);
+    color: var(--color-btn-background);
+}
+
+/* Circle Button */
+.btn-circle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3em;
+    padding: 1em 1em;
+    border-radius: var(--raduis-btn-border);
+    transition-property: outline, color, background-color;
+    transition-duration: 250ms;
+    transition-timing-function: var(--transition--timing-function);
+    margin: .7em;
+}
+
+/* Button Properties */
+.btn-small {
+    font-size: 1em;
+}
+.btn-big {
+    font-size: 1.5em;
+}
+.btn-wide {
+    padding: .75em 5.5em;
+}
+
+.btn-theme:hover {
+    transform: rotate(0deg);
+    transition: 450ms;
+    transition-timing-function: var(--transition--timing-function);
+}
+.btn-theme:hover {
+    transform: rotate(180deg);
+    transition: 600ms;
+    transition-timing-function: var(--transition--timing-function);
+}

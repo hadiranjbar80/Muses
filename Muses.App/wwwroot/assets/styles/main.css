@@ -1,0 +1,133 @@
+/*
+* Muses
+* Mohammad Javad Rakhshani
+* Jan, 2023
+*/
+
+/* Components */
+@import url("components/boxes.css");
+@import url("components/text.css");
+@import url("components/textboxes.css");
+@import url("components/buttons.css");
+
+/* Fonts */
+@import url("../fonts/font.css");
+
+/* Variables */
+:root {
+    --color-primary: #6E29FF;
+    --color-primary-darker: #4100CA;
+    --color-primary-darkest: #2D008B;
+    --color-main-background: #F1F4FF;
+    --color-main-background-blur: #f1f4ff86;
+    --color-scrollbar: #d0d3df;
+    --color-scrollbar-hover: #82848aa4;
+    --color-main-color: #262729;
+    --color-secondary-color: #5f6066;
+    --color-error-color: #7A2929;
+    --color-textbox-background: #DDE1ED;
+    --color-textbox-disable-background: #CBCFDA;
+    --color-textbox-error-background: #F2DCDC;
+    --color-textbox-color: #444649;
+    --color-textbox-disabled-color: #9FA3B0;
+    --color-textbox-error-color: var(--color-error-color);
+    --color-textbox-placeholder-color: #939393;
+    --color-btn-background: #DDE1ED;
+    --color-btn-outline: #BDC0CB;
+    --color-btn-color: #262729;
+    --color-btn-primary-background: var(--color-primary);
+    --color-btn-primary-background-dark: var(--color-primary-darkest);
+    --color-btn-primary-outline: var(--color-primary-darker);
+    --color-btn-primary-color: #F1F4FF;
+    --color-text-copyright: #818590;
+    --size-width-error-text: 250px;
+    --raduis-textbox-border: 999px;
+    --raduis-lyric-container-border: 40px;
+    --raduis-btn-border: 999px;
+    --padding-textbox-left: 36px;
+    --padding-textbox-right: 36px;
+    --padding-textbox-top: 19px;
+    --padding-textbox-bottom: 14px;
+    --font-family-main: 'Comfortaa';
+    --transition--timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+/* Basic Document Config */
+* {
+    font-family: var(--font-family-main), cursive, system-ui, -apple-system;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-size: 16px;
+    color: var(--color-main-color);
+    background-color: var(--color-main-background);
+}
+
+.width-100 {
+    position: relative;
+    width: 100%;
+}
+
+.parent {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    position: relative;
+    width: 50%;
+}
+
+/* Scrollbar Config */
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--color-scrollbar);
+    border-radius: 20px;
+    border: 0.5em solid transparent;
+    background-clip: content-box;
+}
+
+    ::-webkit-scrollbar-thumb:hover {
+        background-color: var(--color-scrollbar-hover);
+    }
+
+/* Progress Bar Config */
+progress[value] {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    appearance: none;
+    width: 15em;
+    height: .5em;
+}
+
+    /* Progress Background */
+    progress[value]::-webkit-progress-bar {
+        background-color: var(--color-main-background);
+        border-radius: var(--raduis-lyric-container-border);
+        outline: var(--color-btn-outline) solid 1px;
+    }
+
+    /* Progress Bar */
+    progress[value]::-webkit-progress-value {
+        background-image: -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)), -webkit-linear-gradient(right, var(--color-primary), var(--color-primary-darkest));
+        border-radius: var(--raduis-lyric-container-border);
+        background-size: 35px 20px, 100% 100%, 100% 100%;
+    }
+
+.text-danger {
+    color: red;
+}

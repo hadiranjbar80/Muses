@@ -1,0 +1,319 @@
+/*
+* Muses
+* Mohammad Javad Rakhshani
+* Jan, 2023
+*
+* Boxes
+*/
+
+
+/* Container Boxes */
+.container-full {
+    width: 100%!important;
+    padding: 0 5%;
+}
+.container {
+    width: 360px!important;
+    padding: 0 5%;
+}
+.container-sm {
+    width: 540px!important;
+    padding: 0 5%;
+}
+.container-md {
+    width: 720px!important;
+    padding: 0 5%;
+}
+.container-lg {
+    width: 960px!important;
+    padding: 0 5%;
+}
+.container-xl {
+    width: 1140px!important;
+    padding: 0 5%;
+}
+.container-xxl {
+    width: 1320px!important;
+    padding: 0 5%;
+}
+
+/* Lyrics Boxes */
+.lyric-container {
+    width: auto;
+    background-color: transparent;
+    padding: 2em 2em 1em;
+    height: 38em;
+    border: 1px solid var(--color-main-color);
+    border-radius: var(--raduis-lyric-container-border);
+}
+.lyric-text-container {
+    width: auto;
+    position: relative;
+    left: -1px;
+    height: 100%;
+    width: 100%;
+    padding-bottom: 5em;
+    overflow-y: auto;
+}
+.lyric-links {
+    width: calc(100% - 4.38em);
+    height: 8em;
+    position: absolute;
+    bottom: 0;
+    left: 2.25em;
+    background: linear-gradient(transparent, var(--color-main-background) 55%) ;
+}
+
+
+/* Flex Container Boxes */
+.flex {
+    display: flex;
+    width: auto;
+}
+.flexbox {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+}
+
+
+/* Flex Container Properties */
+.flex-center-x {
+    align-items: center;
+}
+.flex-center-y {
+    justify-content: center;
+}
+.flex-space-between-x {
+    justify-content: space-between;
+}
+.flex-space-around-x {
+    justify-content: space-around;
+}
+.flex-left-align {
+    justify-content: left;
+}
+
+
+/* Box Container Properties */
+.go-top-half {
+    position: relative;
+    bottom: 0.5em;
+}
+.w-100 {
+    width: 100%;
+}
+.h-100 {
+    height: 100%;
+}
+.hidden {
+    display: none;
+}
+
+/* margins */
+.m-0 {
+    margin: 0em;
+}
+.m-1 {
+    margin: 1em;
+}
+.m-2 {
+    margin: 2em;
+}
+.m-3 {
+    margin: 3em;
+}
+.m-4 {
+    margin: 4em;
+}
+.m-5 {
+    margin: 5em;
+}
+.m-10 {
+    margin: 10em;
+}
+.mx-less {
+    margin: auto -0.5em;
+}
+/* margin x */
+.mx-1 {
+    margin: auto 1em;
+}
+.mx-2 {
+    margin: auto 2em;
+}
+.mx-3 {
+    margin: auto 3em;
+}
+.mx-4 {
+    margin: auto 4em;
+}
+.mx-5 {
+    margin: auto 5em;
+}
+.mx-10 {
+    margin: auto 10em;
+}
+/* margin y */
+.my-less {
+    margin: -0.5em auto;
+}
+.my-1 {
+    margin: 1em auto;
+}
+.my-2 {
+    margin: 2em auto;
+}
+.my-3 {
+    margin: 3em auto;
+}
+.my-4 {
+    margin: 4em auto;
+}
+.my-5 {
+    margin: 5em auto;
+}
+.my-10 {
+    padding: 10em auto;
+}
+
+/* paddings */
+.p-0 {
+    padding: 0em;
+}
+.p-1 {
+    padding: 1em;
+}
+.p-2 {
+    padding: 2em;
+}
+.p-3 {
+    padding: 3em;
+}
+.p-4 {
+    padding: 4em;
+}
+.p-5 {
+    padding: 5em;
+}
+.p-10 {
+    padding: 10em;
+}
+
+/* padding x */
+.px-1 {
+    padding: auto 1em;
+}
+.px-2 {
+    padding: auto 2em;
+}
+.px-3 {
+    padding: auto 3em;
+}
+.px-4 {
+    padding: auto 4em;
+}
+.px-5 {
+    padding: auto 5em;
+}
+.px-10 {
+    padding: auto 10em;
+}
+
+/* padding y */
+.py-1 {
+    padding: 1em auto;
+}
+.py-2 {
+    padding: 2em auto;
+}
+.py-3 {
+    padding: 3em auto;
+}
+.py-4 {
+    padding: 4em auto;
+}
+.py-5 {
+    padding: 5em auto;
+}
+.py-10 {
+    padding: 10em auto;
+}
+
+/* Static config */
+.static-footer {
+    position: fixed;
+    background-color: var(--color-main-background-blur);
+    backdrop-filter: blur(10px);
+    width: 100%;
+    height: 3em;
+    bottom: 0;
+    padding: 0 1em;
+}
+.home-static-footer {
+    position: fixed;
+    background-color: var(--color-main-background-blur);
+    backdrop-filter: blur(10px);
+    height: 5em;
+    bottom: 0;
+    padding: 0 5em;
+}
+nav > * {
+    list-style: none;
+}
+
+/* Small devices (landscape phones, 576px and up) */
+@media screen and (max-width: 576px) {
+    .container, 
+    .container-sm, 
+    .container-md, 
+    .container-lg, 
+    .container-xl, 
+    .container-xxl {
+        width: 100%!important;
+        padding: 0 1em;
+    }
+    
+    .home-static-footer {
+        padding: 0 1em;
+    }
+    .lyric-links {
+        left: 1.9em;
+    }
+    #lyric-container {
+        left: 2px;
+        width: 90%!important;
+    }
+ }
+
+/* Medium devices (tablets, 768px and up) */
+@media screen and (max-width: 768px) { 
+    .container-md {
+        width: 100%!important;
+    }
+
+    nav.flexbox {
+        display: none;
+    }
+ }
+
+/* Large devices (desktops, 992px and up) */
+@media screen and (max-width: 992px) {
+    .container-lg {
+        width: 100%!important;
+    }
+  }
+
+/* X-Large devices (large desktops, 1200px and up) */
+@media screen and (max-width: 1200px) { 
+    .container-xl {
+        width: 100%!important;
+    }
+ }
+
+/* XX-Large devices (larger desktops, 1400px and up) */
+@media screen and (max-width: 1400px) { 
+    .container-xxl {
+        width: 100%!important;
+    }  
+ }

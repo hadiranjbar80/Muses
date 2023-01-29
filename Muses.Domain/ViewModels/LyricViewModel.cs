@@ -16,4 +16,11 @@ namespace Muses.Domain.ViewModels
         [Display(Name = "SongName")]
         public string SongName { get; set; } = string.Empty;
     }
+
+    public class ShowLyricResult
+    {
+        public string ArtistName { get; set; } = string.Empty;
+        public string SongName { get; set; } = string.Empty;
+        public string Transcript { get; set; } = string.Empty;
+    }
 }

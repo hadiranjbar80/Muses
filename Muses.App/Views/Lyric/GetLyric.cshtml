@@ -3,32 +3,21 @@
     ViewData["Title"] = "Home Page";
 }
 
+<form asp-action="GetLyric" enctype="multipart/form-data" class="flexbox">
+    <div class="textboxes flexbox w-100">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <!-- Artist Section -->
+        <div class="flex"><input autofocus accesskey="/" asp-for="ArtistName" placeholder="Artist" class="textbox w-100"></div>
+        <span asp-validation-for="ArtistName" class="text-danger"></span>
 
-<form asp-action="GetLyric" enctype="multipart/form-data">
-    <div asp-validation-summary="ModelOnly" class="text-danger"></div>
-    <div class="row">
-        <div class="form-group col-6">
-            <label asp-for="ArtistName" class="control-label"></label>
-            <input asp-for="ArtistName" class="form-control" />
-            <span asp-validation-for="ArtistName" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="row">
-        <div class="form-group col-6">
-            <label asp-for="SongName" class="control-label"></label>
-            <input asp-for="SongName" class="form-control" />
-            <span asp-validation-for="SongName" class="text-danger"></span>
-        </div>
-    </div>
-    <div class="form-group">
-        <input type="submit" value="Search" class="btn btn-primary" />
+
+        <!-- Song Section -->
+        <div class="flex"><input asp-for="SongName" placeholder="Song" class="textbox w-100 go-top-half"></div>
+        <span asp-validation-for="SongName" class="text-danger"></span>
     </div>
 
+    <!-- Search Button Section -->
+    <div class="buttons flexbox w-100">
+        <div class="flex"><input type="submit" value="Search" class="btn btn-primary w-100"></div>
+    </div>
 </form>
-
-@if (Model != null)
-{
-    <div>
-        @ViewBag.L
-    </div>
-}

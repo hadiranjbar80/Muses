@@ -1,0 +1,94 @@
+﻿@model ShowLyricResult
+@{
+    ViewData["Title"] = "ShowTranscript";
+}
+
+<header>
+    <div class="container-full flexbox">
+        <!-- Muses Logo -->
+        <!-- Query Info Section -->
+        <div class="flexbox width-100 flex-center-x">
+            <!-- Song Section -->
+            <div class="flexbox">
+                <h2 class="title-3 title-padding">@Model.SongName</h2>
+            </div>
+            <!-- Artist Section -->
+            <div class="flexbox">
+                <h2 class="title-4 title-padding">@Model.ArtistName</h2>
+            </div>
+        </div>
+
+        <!-- Music Controls Section -->
+        <div class="flexbox width-100 flex-center-x flex-center-y">
+            <!-- Like Button Section -->
+            <div class="flex flex-center-x flex-center-y m-1">
+                <button class="btn btn-circle btn-small" title="Link song">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"></path>
+                    </svg>
+                </button>
+
+                <!-- Play/Pause Button Section -->
+                <button class="btn btn-circle btn-primary" title="Play/Pause song">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <polygon points="5 3 19 12 5 21 5 3"></polygon>
+                    </svg>
+
+                </button>
+
+                <!-- Link Button Section -->
+                <button class="btn btn-circle btn-small" title="Copy link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                        <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                    </svg>
+                </button>
+            </div>
+
+            <!-- Music Progress Bar Section -->
+            <div class="flex">
+                <span class="text p-1">00:45</span>
+                <progress id="song-seek" max="139" value="50"></progress> <!-- Max: song max seconds -->
+                <span class="text p-1">3:16</span>
+            </div>
+
+        </div>
+    </div>
+</header>
+
+
+<!-- Lyrics Box Section -->
+<div class="flexbox width-100 flex-center-x">
+    <div class="container-sm lyric-container m-1" id="lyric-container">
+        <div class="lyric-text-container">
+
+            <p class="text m-1 text-lyric">
+                @Model.Transcript
+            </p>
+
+        </div>
+
+        <!-- Lyrics Box Links Section -->
+        <div class="lyric-links">
+            <div class="flexbox flex-center-x flex-center-y h-100">
+                <div class="flex flex-center-x flex-center-y">
+                    <!-- Lyrics Box Links: Copy to Clipboard -->
+                    <button class="btn btn-circle btn-primary btn-small" title="Copy to Clipboard">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"></path>
+                            <rect x="8" y="2" width="8" height="4" rx="1" ry="1"></rect>
+                        </svg>
+                    </button>
+
+                    <!-- Lyrics Box Links: Copy link -->
+                    <button class="btn btn-circle btn-primary btn-small" title="Copy link">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path>
+                            <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

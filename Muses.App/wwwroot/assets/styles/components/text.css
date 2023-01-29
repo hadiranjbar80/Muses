@@ -1,0 +1,54 @@
+/*
+* Muses
+* Mohammad Javad Rakhshani
+* Jan, 2023
+*
+* Textes
+*/
+
+/* Titles */
+.title-1 {
+    font-size: 2.5em;
+}
+.title-2 {
+    font-size: 2em;
+}
+.title-3 {
+    font-size: 1.75em;
+}
+.title-4 {
+    font-size: 1.25em;
+    color: var(--color-secondary-color);
+}
+
+/* Title Properties */
+.title-padding {
+    padding: 0.25em;
+}
+
+/* Texts */
+.text {
+    font-size: 1em;
+}
+.text-lyric {
+    font-size: 1em;
+    font-weight: normal;
+    line-height: 1.5em;
+}
+
+/* Text Properties */
+.bold {
+    font-weight: bolder;
+}
+.text-center {
+    text-align: center;
+}
+.text-primary {
+    color: var(--color-primary-color);
+}
+.error-message {
+    color: var(--color-error-color);
+}
+.copyright {
+    color: var(--color-text-copyright);
+}
