@@ -175,6 +175,11 @@ namespace Muses.App.Controllers
                 SongName = TempData["SongName"].ToString()
             };
 
+            if (result == null)
+            {
+                return NotFound();
+            }
+
             return View(result);
         }
     }
